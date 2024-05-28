@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Arrière-plan de la page */
+    color: #333; /* Couleur de texte par défaut */
+}
+
+header {
+    background-color: #333; /* Arrière-plan du header */
+    color: #fff; /* Couleur de texte du header */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff; /* Couleur de texte des liens */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9c74f; /* Couleur de texte au survol */
+}
+
+main {
+    padding: 60px;
+}
+
+footer {
+    background-color: #333; /* Arrière-plan du footer */
+    color: #fff; /* Couleur de texte du footer */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#posts article {
+    background-color: #fff; /* Arrière-plan des articles */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #333; /* Couleur de texte des articles */
+}
+
+#posts article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Styles pour les titres des articles */
+#posts article h2 {
+    font-size: 24px;
+    color: #333; /* Couleur de texte des titres */
+    margin-bottom: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+#posts article h2 a {
+    text-decoration: none;
+    color: inherit; /* Hérite de la couleur du parent */
+}
+
+#posts article h2:hover {
+    color: #f9c74f; /* Couleur de texte au survol */
+    transform: translateY(-5px); /* Légère translation vers le haut au survol */
+}
+
+section {
+    opacity: 0; /* Section invisible par défaut */
+    transform: translateY(20px); /* Décalage vers le bas */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition en douceur */
+    color: #333; /* Couleur de texte par défaut pour les sections */
+}
+
+section.visible {
+    opacity: 1; /* Section complètement visible */
+    transform: translateY(0); /* Position finale */
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333; /* Couleur de texte des labels */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333; /* Couleur de texte des champs de formulaire */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+#message {
+    height: 35vh;
+}
