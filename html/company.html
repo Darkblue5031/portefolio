@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon.png">
+    <title>Portfolio - Entreprise</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <label class="toggle dark-mode-toggle">
+                        <input id="dark-mode-toggle" class="toggle-checkbox" type="checkbox" onclick="toggleDarkMode()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="company.html">Entreprise</a></li>
+                <li>
+                    <label class="toggle color-switch-toggle">
+                        <input id="color-switch" class="toggle-checkbox" type="checkbox" onclick="switchColors()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+            </ul>            
+        </nav>
+        <script src="../js/toggle.js"></script>
+    </header>
+<main>
+    <section id="company">
+        <h1>Présentation de l'entreprise</h1>
+        <p>Description de l'entreprise, environnement de travail, etc.</p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Blog Portfolio. Tous droits réservés.</p>
+    <script src="../js/section.js"></script>
+</footer>
+</body>
+</html>

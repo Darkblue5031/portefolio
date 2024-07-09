@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon.png">
+    <title>Portefolio - Accueil</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <label class="toggle dark-mode-toggle">
+                        <input id="dark-mode-toggle" class="toggle-checkbox" type="checkbox" onclick="toggleDarkMode()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+                <li><a href="index.html">Projets</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="company.html">Entreprise</a></li>
+                <li>
+                    <label class="toggle color-switch-toggle">
+                        <input id="color-switch" class="toggle-checkbox" type="checkbox" onclick="switchColors()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+            </ul>            
+        </nav>
+        <script src="../js/toggle.js"></script>
+    </header>
+<main id="posts">
+            <section class="visible">
+                <article>
+                    <h2><a target="_blank" href="https://github.com/Wanaps/DomoLabo">Domolabo</a></h2>
+                    <img id="icon" src="../images/domolabo.png" alt="Domolabo">
+                    <p id="icon_pd">Le projet DomoLabo est une initiative ambitieuse visant à créer un système domotique complet et accessible à partir de technologies open source. Dirigé par une équipe comprenant Manon ARCAS, Léo MACE, Killian Guillemot, Mattéo Verdez et moi-même, le projet se concentre sur la conception d'objets connectés, un hub central de gestion, et une application mobile pour contrôler le système.
+
+                        Les fondations reposent sur l'utilisation de Bluetooth Low Energy et MQTT pour assurer une connectivité fiable et flexible. Ce projet nous a permis de développer nos compétences techniques tout en explorant des technologies innovantes pour rendre la maison intelligente accessible, intuitive et personnalisable pour tous.</p>
+                </article>
+                <article>
+                    <h2>Coffre connecté</h2>
+                    <img id="icon" src="../images/coffre.png" alt="Coffre Connecté">
+                    <p id="icon_p">Création d'un coffre sécurisé permettant plusieurs méthodes d'authentification pour l'ouverture. Destiné au stockage sécurisé d'objets de valeur tels que bijoux, documents et argent.​Intégration d'un capteur RFID, d'un pavé numérique, de signaux sonores et lumineux, ainsi que d'un servo-moteur pour l'ouverture du coffre. Conception 3D et impression du modèle, avec utilisation de KiCad pour les schémas électriques et la gestion des composants.</p>
+                </article>
+                <article>
+                    <h2><a target="_blank" href="https://github.com/Manon-Arc/Marcus_Hackathon">Marcus</a></h2>
+                    <img id="icon" src="../images/marcus.png" alt="Marcus">
+                    <p id="icon_p">Ce prototype de robot pompier a été développé lors d'un hackathon. Il est équipé de roues Mecanum permettant un déplacement omnidirectionnel sur 6 axes, ainsi que d'un canon à eau. Les accessoires sont démontables pour une plus grande modularité. Le robot utilise une carte ESP32 et est programmé en MicroPython. La communication entre les cartes se fait via le protocole ESP-NOW.</p>
+                </article>
+                <article>
+                    <h2><a target="_blank" href="https://gitlab.com/baptgdb/robolympiades-2022_2023/">Robolympiades</a></h2>
+                    <img id="icon" src="../images/rhino.png" alt="Robolympiades">
+                    <p id="icon_p">Le projet des Robolympiades, organisé par nous, les étudiants du Yday, a consisté en une compétition de robotique mobile avec quatre épreuves distinctes, incluant le contrôle via une interface web. Nous avons conçu et programmé de petits robots pour s'affronter dans des défis variés. L'événement a captivé un public composé notamment d'enfants, qui ont eu l'occasion de participer à des jeux interactifs avec les robots. Nous avons pu démontrer notre créativité, ingéniosité et compétences techniques, tout en partageant notre savoir et nos expériences avec les participants.</p>
+                </article>
+            </section>
+            
+</main>
+<footer>
+    <p>Article publié le 08/07/2024.</p>
+    <script src="../js/section.js"></script>
+</footer>
+</body>
+</html>
+

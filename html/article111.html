@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon.png">
+    <title>Article 2 - Stage et Projets Web</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <label class="toggle dark-mode-toggle">
+                        <input id="dark-mode-toggle" class="toggle-checkbox" type="checkbox" onclick="toggleDarkMode()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="company.html">Entreprise</a></li>
+                <li>
+                    <label class="toggle color-switch-toggle">
+                        <input id="color-switch" class="toggle-checkbox" type="checkbox" onclick="switchColors()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+            </ul>            
+        </nav>
+        <script src="../js/toggle.js"></script>
+    </header>
+<main id="posts">
+    <article>
+            <h1>Expériences de Stage et Projets Web</h1>
+
+        <section class="visible">
+            <h2>Introduction</h2>
+            <p>Lors de notre stage dans l'entreprise que je vais présenter prochainement, nous sommes impliqués dans la réalisation de projets web. Les maîtres de stage, jouant le rôle de clients, définissant les objectifs et les attentes pour chaque projet.</p>
+        </section>
+
+        <section class="visible">
+            <h2>Réunion Initiale et Présentation des Propositions</h2>
+            <p>Lors de notre première réunion, nous avons dû présenter nos propositions, abordant à la fois les aspects visuels et budgétaires des projets. Bien que l’exercice puisse sembler complexe, nous avons réussi à formuler des propositions convaincantes. Nous avons même anticipé des évolutions potentielles en discutant, par exemple, de plafonds budgétaires pour certaines solutions.</p>
+            <!-- <img src="images/reunion.jpg" alt="Réunion de travail"> -->
+        </section>
+
+        <section class="visible">
+            <h2>Compétences Mobilisées</h2>
+            <p>Ces moments mettent en lumière les compétences que nous avons acquises au cours de nos deux années de formation. Grâce à notre expérience diversifiée en gestion de projets, nous avons pu aborder cette tâche avec minutie et une certaine aisance. Nous sommes désormais habitués à ce type d'exercice.</p>
+            <!-- <img src="images/gestion_projet.jpg" alt="Gestion de projet"> -->
+        </section>
+
+        <section class="visible">
+            <h2>Développement et Révision du Projet</h2>
+            <p>Pour cette première semaine, j'ai consacré une grande partie de mon temps à la gestion de projet. Ayant commencé à coder une version préliminaire du projet avant le début du stage, il a été nécessaire que les autres membres de l’équipe s’imprègnent de ce code. Cette version initiale a permis d’identifier des limites et des modifications nécessaires.</p>
+            <p>Nous avons finalement décidé de refaire le projet, en tenant compte des travaux déjà réalisés. Cette approche nous a permis de gagner un temps précieux dans la réalisation de la nouvelle version, que nous espérons définitive.</p>
+        </section>
+
+        <section class="visible">
+            <h2>Aspects Financiers et Techniques</h2>
+            <p>Parmi les points abordés lors de cette première réunion, nous avons calculé divers frais, tels que l’hébergement et le nom de domaine, en veillant à maintenir une marge de manœuvre sur le budget. Une de nos suggestions pour répondre au besoin de réception des commandes par le personnel du restaurant a été la mise en place d’une imprimante connectée.</p>
+            <p>En utilisant une <a target="_blank" href="https://www.raspberrypi.org/products/raspberry-pi-pico/">Raspberry Pi Pico</a> et une imprimante thermique, nous avons proposé un système pratique et économique pour imprimer les reçus des commandes directement sur place, simplifiant ainsi la gestion des commandes en ligne lors des périodes de forte affluence.</p>
+            <img id="pico" src="../images/raspberry_pi_pico.jpg" alt="Raspberry Pi Pico">
+            <img id="thermique" src="../images/imprimante_thermique.png" alt="Imprimante thermique">
+        </section>
+
+        <section class="visible">
+            <h2>Communication et Synthèse</h2>
+            <p>Nous avons ensuite synthétisé la réunion et envoyé un récapitulatif par mail aux maîtres de stage, mentionnant les besoins des clients, nos réponses en tant que développeurs, ainsi que leurs choix sur les solutions proposées afin de procéder à leur mise en place.</p>
+            <div class="cv-download">
+                <a id="in_article" href="../files/STAGE - Réunion du mardi 2 juilet 2024.pdf" download="STAGE - Réunion du mardi 2 juilet 2024.pdf" target="_blank" class="btn btn-primary">Compte-Rendu</a>
+            </div>
+
+        </section>
+
+        <section class="visible">
+            <h2>Réflexion Personnelle</h2>
+            <p>Ces exemples montrent comment nous avons structuré notre travail, en tenant compte des besoins clients tout en optimisant notre temps et nos ressources. Notre capacité à anticiper et à proposer des solutions créatives nous a permis de répondre aux attentes des clients, même si le projet n'est pas encore terminé.</p>
+            <p>Au-delà des compétences techniques, cette semaine m'a permis de mettre en valeur mes compétences en communication et en gestion d'équipe. Cela rapelle l'importance de la clarté dans les échanges et de la précision dans la documentation des réunions et des décisions prises. Cette expérience a renforcé ma confiance en mes capacités à gérer des projets complexes et à travailler efficacement en équipe.</p>
+            <p>Je suis également devenu plus conscient des défis techniques et logistiques liés au développement de solutions web pour des clients réels. Cela m'a poussé à être plus rigoureux dans mon approche, à tester minutieusement chaque fonctionnalité et à anticiper les besoins futurs des utilisateurs.</p>
+        </section>
+    </article>
+
+    <nav class="article-navigation">
+        <a href="article1.html" class="prev-article">&lt; Article précédent</a>
+        <a href="article3.html" class="next-article">Article suivant &gt;</a>
+    </nav>
+</main>
+<footer>
+    <p>Article publié le 08/07/2024.</p>
+    <script src="../js/section.js"></script>
+</footer>
+</body>
+</html>

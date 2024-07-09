@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portefolio - A Propos</title>
+    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <label class="toggle dark-mode-toggle">
+                        <input id="dark-mode-toggle" class="toggle-checkbox" type="checkbox" onclick="toggleDarkMode()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="company.html">Entreprise</a></li>
+                <li>
+                    <label class="toggle color-switch-toggle">
+                        <input id="color-switch" class="toggle-checkbox" type="checkbox" onclick="switchColors()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+            </ul>            
+        </nav>
+        <script src="../js/toggle.js"></script>
+    </header>
+<main>
+    <section id="cv">
+        <h1>À propos de moi</h1>
+        <div class="cv-content">
+            <p>Je suis Mathieu Barboteau, étudiant en Bachelor Développement Logiciel à Bordeaux Ynov Campus, et je commence mon alternance chez DEKRA Automobile en septembre. Ce nouveau rôle d'alternant en développement web va me permettre d'appliquer mes compétences en .NET et Angular dans un environnement professionnel stimulant. J'anticipe avec enthousiasme les défis et les opportunités que ce poste va m'offrir pour développer mes compétences et contribuer efficacement au projet d'application en cours.</p>
+            <p>En parallèle, je continuerai d'assumer mes responsabilités de préparateur de commandes au Leclerc Drive, où j'ai acquis une solide expertise en logistique et en gestion d'équipe au cours des deux dernières années. Cette expérience m'a non seulement permis de concilier travail et études, mais aussi de développer des compétences essentielles pour travailler dans des environnements dynamiques et exigents.</p>
+            <p>Mon engagement dans mes études et mon ambition de réussir dans le domaine du développement logiciel se reflètent dans mes projets académiques passés, comme le développement d'un robot pompier et d'une application météo en C#. Ces expériences, combinées à ma maîtrise de plusieurs langages de programmation et à mes compétences techniques en administration de systèmes GNU/Linux et en Docker, me préparent à faire une contribution significative dès mes débuts chez DEKRA.</p>
+            <p>Je suis également passionné par le baseball, où j'ai acquis des compétences en arbitrage et en encadrement des jeunes joueurs. Mon niveau de langue en anglais (B2+) et en espagnol (C1) complète mon profil, m'offrant une ouverture internationale et une capacité à travailler dans des environnements multiculturels.</p>
+            <p>Je suis convaincu que mon parcours diversifié et ma détermination à exceller font de moi un candidat sérieux et polyvalent, prêt à apporter une valeur ajoutée à l'équipe de DEKRA Automobile et à contribuer positivement à vos projets futurs dans le domaine du développement et au-delà.</p>
+            <img id="me" src="../images/me.jpeg" alt="Me !">
+        </div>
+        <div class="cv-download">
+            <a id="in_article" href="../files/cv.pdf" download="Mon_CV.pdf" target="_blank" class="btn btn-primary">Télécharger CV PDF</a>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Blog Portfolio. Tous droits réservés.</p>
+    <script src="../js/section.js"></script>
+</footer>
+</body>
+</html>
