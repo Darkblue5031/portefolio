@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let isSubmitting = false;
 
     form.addEventListener('submit', function(event) {
-        addAlertToContainer('info', 'Votre formulaire de demande de contact est en cours d\'envoi. Vous aller être informé(e) de sa bonne transmission. Merci de patienter quelques instants !');
         event.preventDefault();
+        addAlertToContainer('info', 'Votre formulaire de demande de contact est en cours d\'envoi. Vous allez être informé(e) de sa bonne transmission. Merci de patienter quelques instants !');
 
         if (isSubmitting) return;
         isSubmitting = true;
@@ -21,13 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
             message: message
         })
         .then(function(response) {
-            removeInfoAlert()
             addAlertToContainer('success', 'Merci d\'avoir pris le temps de me contacter via mon blog portfolio. Votre formulaire de contact a été envoyé avec succès et une réponse vous sera adressée dans les meilleurs délais.');
             form.reset();
             isSubmitting = false;
             submitButton.disabled = false;
         }, function(error) {
-            removeInfoAlert()
             addAlertToContainer('warning', 'Un problème est survenu lors de l\'envoi de votre formulaire de contact. Je travaille actuellement à résoudre cette situation et vous encourage à réessayer ultérieurement. Veuillez m\'excuser pour ce désagrément.');
             isSubmitting = false;
             submitButton.disabled = false;
@@ -35,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 function addAlertToContainer(type, message) {
+    removeInfoAlert()
     const container = document.querySelector('.container');
     if (container) {
         let alertHTML = '';
@@ -70,7 +68,7 @@ function addAlertToContainer(type, message) {
                             <p>${message}</p>
                         </div>
                         <button class="close" onclick="closeAlert(event)">
-                            <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#69727D" d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
+                            <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/1999/xlink"><path fill="#69727D" d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
                         </button>
                     </div>
                 `;
@@ -85,7 +83,7 @@ function addAlertToContainer(type, message) {
                             <p>${message}</p>
                         </div>
                         <button class="close" onclick="closeAlert(event)">
-                            <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#69727D" d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
+                            <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/1999/xlink"><path fill="#69727D" d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
                         </button>
                     </div>
                 `;
@@ -105,8 +103,8 @@ function closeAlert(event) {
 }
 
 function removeInfoAlert() {
-    var elementToRemove = document.querySelector('.' + 'info.alert');
+    const elementToRemove = document.querySelector('.info.alert');
     if (elementToRemove) {
-        elementToRemove.parentNode.removeChild(elementToRemove);
+        elementToRemove.remove();
     }
 }

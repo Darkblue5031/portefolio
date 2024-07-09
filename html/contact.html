@@ -23,7 +23,7 @@
                         <div class="toggle-switch"></div>
                     </label>
                 </li>
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projects.html">Projets</a></li>
                 <li><a href="articles.html">Articles</a></li>
                 <li><a href="about.html">À propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -37,18 +37,19 @@
             </ul>            
         </nav>
         <script src="../js/toggle.js"></script>
+        <script src="../js/header_listener.js"></script>
     </header>
     <main>
-        <section id="contact">
-            <h1>Contactez-moi</h1>
+        <section id="contact-section">
+            <h1 id="contact-title">Contactez-moi</h1>
             <form id="contact-form">
-                <label for="name">Nom:</label>
+                <label for="name" id="name-label">Nom:</label>
                 <input type="text" id="name" name="name" required>
     
-                <label for="email">Email:</label>
+                <label for="email" id="email-label">Email:</label>
                 <input type="email" id="email" name="email" required>
     
-                <label for="message">Message:</label>
+                <label for="message" id="message-label">Message:</label>
                 <textarea id="message" name="message" required></textarea>
     
                 <button type="submit" id="submit-button">Envoyer</button>
@@ -61,5 +62,6 @@
 </footer>
 <script src="../js/section.js"></script>
 <script src="../js/contact.js"></script>
+<script src="../js/contract_listener.js"></script>
 </body>
 </html>

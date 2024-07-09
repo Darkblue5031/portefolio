@@ -1,75 +1,92 @@
-document.documentElement.style.setProperty('--main-color', '#e3a2d3'); // Pink
-// function switchColors() { // Trois couleurs
-//     // Get the current value of --main-color
-//     var currentColor = document.documentElement.style.getPropertyValue('--main-color').trim();
-
-//     // Toggle between two sets of variables
-//     if (currentColor === 'rgb(0, 123, 255)') {
-//         // Switch to alternate colors (Blue to Yellow)
-//         document.documentElement.style.setProperty('--main-color', '#f9c74f'); // Yellow
-
-//     } else if (currentColor === '#f9c74f') {
-//         // Switch to another alternate color (Yellow to Pink)
-//         document.documentElement.style.setProperty('--main-color', '#e3a2d3'); // Pink
-
-//     } else if (currentColor === '#e3a2d3') {
-//         // Switch back to default color (Pink to Blue)
-//         document.documentElement.style.setProperty('--main-color', 'rgb(0, 123, 255)'); // Blue
-//     }
-// }
+applySavedColorPreference();
+restoreCheckboxState();
+applySavedThemePreference();
 
 function switchColors() {
-    var currentColor = document.documentElement.style.getPropertyValue('--main-color').trim();
-
-    if (currentColor === 'rgb(0, 123, 255)') {
-        document.documentElement.style.setProperty('--main-color', '#e3a2d3'); // Pink
-
+    var currentColor = getComputedStyle(document.documentElement).getPropertyValue('--main-color').trim();
+    
+    if (currentColor === '#1697e7' || currentColor === '') {
+        currentColor = '';
     } else {
-        document.documentElement.style.setProperty('--main-color', 'rgb(0, 123, 255)'); // Blue
+        currentColor = '#1697e7';
+    }
+    
+    localStorage.setItem('currentColor', currentColor);
+    document.documentElement.style.setProperty('--main-color', currentColor);
+    saveCheckboxState();
+}
+
+function applySavedColorPreference() {
+    var color = localStorage.getItem('currentColor') || '#e3a2d3';
+    document.documentElement.style.setProperty('--main-color', color);
+}
+
+function saveCheckboxState() {
+    const colorSwitchCheckbox = document.getElementById('color-switch');
+    localStorage.setItem('rightCheckboxState', colorSwitchCheckbox.checked);
+    const darkModeToggleCheckbox = document.getElementById('dark-mode-toggle');
+    localStorage.setItem('leftCheckboxState', darkModeToggleCheckbox.checked);
+}
+
+function restoreCheckboxState() {
+    const colorSwitchCheckbox = document.getElementById('color-switch');
+    const savedColorSwitchState = localStorage.getItem('rightCheckboxState');
+    colorSwitchCheckbox.checked = savedColorSwitchState === 'true';
+
+    const darkModeToggleCheckbox = document.getElementById('dark-mode-toggle');
+    const savedDarkModeToggleState = localStorage.getItem('leftCheckboxState');
+    darkModeToggleCheckbox.checked = savedDarkModeToggleState === 'true';
+}
+
+function saveAppState() {
+    const currentColor = getComputedStyle(document.documentElement).getPropertyValue('--main-color').trim();
+    localStorage.setItem('currentColor', currentColor);
+
+    const colorSwitchCheckbox = document.getElementById('color-switch');
+    localStorage.setItem('rightCheckboxState', colorSwitchCheckbox.checked);
+    const darkModeToggleCheckbox = document.getElementById('dark-mode-toggle');
+    localStorage.setItem('leftCheckboxState', darkModeToggleCheckbox.checked);
+}
+
+function toggleDarkMode() {
+    var currentBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color-body').trim();
+
+    if (currentBackgroundColor === '' || currentBackgroundColor === 'rgb(249, 249, 249)') {
+        darkMode();
+    } else {
+        lightMode();
+    }
+
+    localStorage.setItem('currentBackgroundColor', document.documentElement.style.getPropertyValue('--background-color-body').trim());
+    saveCheckboxState();
+}
+
+function applySavedThemePreference() {
+    var currentBackgroundColor = localStorage.getItem('currentBackgroundColor');
+
+    if (currentBackgroundColor) {
+        document.documentElement.style.setProperty('--background-color-body', currentBackgroundColor);
+
+        if (currentBackgroundColor === '#2f3136') {
+            darkMode();
+        } else {
+            lightMode();
+        }
     }
 }
 
-document.documentElement.style.setProperty('--fff', '#40444b'); //fond articles
-document.documentElement.style.setProperty('--three-three-three', '#292b2f'); // header and footer
-document.documentElement.style.setProperty('--three-three-three2', '#ccc'); //text
-document.documentElement.style.setProperty('--form-input-background', '#40444b'); // not found
-document.documentElement.style.setProperty('--background-color-body', '#2f3136'); // fond de page
+function lightMode(){
+    document.documentElement.style.setProperty('--background-color-body', 'rgb(249, 249, 249)');
+    document.documentElement.style.setProperty('--fff', '#fff');
+    document.documentElement.style.setProperty('--three-three-three', '#cbced2');
+    document.documentElement.style.setProperty('--three-three-three2', '#333');
+    document.documentElement.style.setProperty('--form-input-background', '#D9DBDB');
+}
 
-function toggleDarkMode() {
-  
-    var currentColor = document.documentElement.style.getPropertyValue('--background-color-body').trim();
-    if (currentColor === '#f9f9f9') {
-      // Mode sombre (retour aux valeurs par défaut)
-        document.documentElement.style.setProperty('--fff', '#40444b');
-        document.documentElement.style.setProperty('--three-three-three', '#292b2f');
-        document.documentElement.style.setProperty('--three-three-three2', '#ccc');
-        document.documentElement.style.setProperty('--form-input-background', '#40444b');
-        document.documentElement.style.setProperty('--background-color-body', '#2f3136');
-    } else {
-      // Mode clair
-        document.documentElement.style.setProperty('--background-color-body', '#f9f9f9');
-        document.documentElement.style.setProperty('--fff', '#fff');
-        document.documentElement.style.setProperty('--three-three-three', '#cbced2');
-        document.documentElement.style.setProperty('--three-three-three2', '#333');
-        document.documentElement.style.setProperty('--form-input-background', '#D9DBDB');
-    }
-  }
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    var currentPath = window.location.href;
-    console.log("Current path:", currentPath);
-
-    var navLinks = document.querySelectorAll("nav ul li a");
-    console.log("Number of nav links:", navLinks.length);
-
-    navLinks.forEach(function(link) {
-        var linkPath = link.getAttribute("href");
-        console.log("Link path:", linkPath);
-
-        // Vérifie si le chemin de la page actuelle se termine par le lienPath
-        if (currentPath.endsWith(linkPath)) {
-            link.classList.add("active");
-        }
-    });
-});
-
+function darkMode(){
+    document.documentElement.style.setProperty('--background-color-body', '#2f3136');
+    document.documentElement.style.setProperty('--fff', '#40444b'); // article background
+    document.documentElement.style.setProperty('--three-three-three', '#292b2f'); // header and footer background
+    document.documentElement.style.setProperty('--three-three-three2', '#ccc'); // text color
+    document.documentElement.style.setProperty('--form-input-background', '#40444b'); // input background
+}
