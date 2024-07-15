@@ -519,3 +519,8 @@ a:link {
   left: 1px; 
   right: 1px;
 }
+#teletravail {
+  width: 50%;
+    height: 50%;
+    margin-left: 25%;
+}

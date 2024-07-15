@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon.png">
+    <title>Mon Expérience de Télétravail : Avantages et Inconvénients</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <label class="toggle dark-mode-toggle">
+                        <input id="dark-mode-toggle" class="toggle-checkbox" type="checkbox" onclick="toggleDarkMode()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="company.html">Entreprise</a></li>
+                <li>
+                    <label class="toggle color-switch-toggle">
+                        <input id="color-switch" class="toggle-checkbox" type="checkbox" onclick="switchColors()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+            </ul>            
+        </nav>
+        <script src="../js/toggle.js"></script>
+        <script src="../js/header_listener.js"></script>
+    </header>
+
+    <main id="posts">
+        <article>
+            <h1>Mon Expérience de Télétravail : Avantages et Inconvénients</h1>
+            <section class="visible">
+                <h2>Introduction</h2>
+                <p>Le télétravail est en plein essor ces dernières années, boosté par les avancées technologiques et les changements dans les modes de travail. En 2023, environ 40% des entreprises dans le monde ont adopté le télétravail comme pratique régulière, permettant ainsi aux employés comme moi de travailler efficacement depuis chez eux.</p>
+            </section>
+
+            <section class="visible">
+                <h2>Avantages</h2>
+                <ol>
+                    <li id="space_lines">Flexibilité des Horaires :
+                        <ul>
+                            <li>Répartition du temps : Pouvoir organiser mes journées selon mes préférences a été extrêmement bénéfique. Cela m'a permis d'optimiser mon emploi du temps et d'être plus productif.</li>
+                            <li>Économies financières : Moins de trajets signifie moins de dépenses en transport, ce qui a non seulement allégé mon budget mais aussi réduit mon empreinte carbone.</li>
+                        </ul>
+                    </li>
+                    <li id="space_lines">Qualité de Vie Améliorée :
+                        <ul>
+                            <li>Maison bien entretenue : La flexibilité du télétravail m'a permis de consacrer du temps à des tâches domestiques comme le ménage, ce qui contribue à un environnement de vie plus agréable.</li>
+                            <li>Équilibre travail-vie personnelle : Pouvoir jongler entre les études, le travail et les responsabilités familiales est devenu plus gérable.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="visible">
+                <h2>Inconvénients</h2>
+                <ol>
+                    <li id="space_lines">Distractions et Isolement :
+                        <ul>
+                            <li>Gestion des distractions : Travailler à domicile peut parfois être perturbant avec les distractions domestiques comme la télévision ou les tâches ménagères.</li>
+                            <li>Manque d'interaction sociale : L'isolement peut affecter le moral et la productivité, surtout en l'absence d'échanges physiques avec les collègues.</li>
+                        </ul>
+                    </li>
+                    <li id="space_lines">Communication Efficiente :
+                        <ul>
+                            <li>Collaboration à distance : Malgré les défis, maintenir une communication claire et régulière avec les autres stagiaires a été crucial pour surmonter les obstacles.</li>
+                            <li>Technologie et support : L'accès à une bonne connexion Internet et à des outils de communication efficaces a été essentiel pour assurer une collaboration réussie.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="visible">
+                <h2>Conclusion</h2>
+                <p>En conclusion, le télétravail offre une flexibilité précieuse et permet des économies significatives tout en améliorant la qualité de vie. Cependant, il présente des défis comme la gestion des distractions et le maintien de l'interaction sociale. Pour que le télétravail soit efficace, il est essentiel d'investir dans une communication efficace et un environnement de travail adapté. Avec une bonne organisation et les bonnes technologies, le télétravail peut être une option viable et productive pour les étudiants et les professionnels.</p>
+            </section>
+            <img id="teletravail" src="../images/télétravail2.jpg" alt="Illustration télétravail">
+        </article>
+
+        <nav class="article-navigation">
+            <a href="article2.html" class="prev-article">&lt; Article précédent</a>
+            <a href="article4.html" class="next-article">Article suivant &gt;</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>Article publié le 15/07/2024</p>
+        <script src="../js/section.js"></script>
+    </footer>
+</body>
+</html>
