@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon.png">
+    <title>Article 0 - Présentation du Blog : Une Vision d'Ensemble du Projet</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <label class="toggle dark-mode-toggle">
+                        <input id="dark-mode-toggle" class="toggle-checkbox" type="checkbox" onclick="toggleDarkMode()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="company.html">Entreprise</a></li>
+                <li>
+                    <label class="toggle color-switch-toggle">
+                        <input id="color-switch" class="toggle-checkbox" type="checkbox" onclick="switchColors()">
+                        <div class="toggle-switch"></div>
+                    </label>
+                </li>
+            </ul>            
+        </nav>
+        <script src="../js/toggle.js"></script>
+        <script src="../js/header_listener.js"></script>
+    </header>
+    <main id="posts">
+        <article>
+            <h1>Présentation du Blog : Une Vision d'Ensemble du Projet</h1>
+            <img id="teletravail" src="../images/gestion_projet.png" alt="Illustrations gestion de projet">
+            <section class="visible">
+                <h2>Introduction</h2>
+                <p>Bienvenue sur notre blog dédié à la gestion de projet de notre site web. Ici, nous vous proposons une vision globale de notre projet, en mettant en lumière les aspects de la chefferie de projet, la coordination et la gestion des différentes étapes du développement. Ce blog est conçu pour vous offrir une compréhension approfondie de notre démarche, nos méthodes et nos objectifs.</p>
+            </section>
+            <section class="visible">
+                <h2>La Vision d'Ensemble</h2>
+                <p>En tant que chef de projet, mon rôle est de coordonner les efforts de l'équipe, de veiller au respect des délais et de s'assurer que chaque étape du projet se déroule sans encombre. Mon blog se concentre sur les aspects suivants :</p>
+                <ol>
+                    <ul>
+                        <li>Planification et gestion de projet.</li>
+                        <li>Communication et collaboration avec les membres de l'équipe.</li>
+                        <li>Suivi des objectifs et des délais.</li>
+                        <li>Résolution des problèmes et prise de décisions stratégiques.</li>
+                    </ul>
+                </ol>
+                <p>En partageant ces éléments, je vise à offrir une vision claire et structurée de notre progression, des défis rencontrés et des solutions mises en place pour garantir la réussite du projet.</p>
+            </section>
+        
+            <section class="visible">
+                <h2>Les Contributions Techniques de l'Équipe</h2>
+                <p>Mon blog n'est qu'une partie de l'ensemble du projet. Pour une perspective plus technique, je vous invite à explorer les blogs de mes collègues, <strong>Marine JACOLOT</strong> et <strong>Nathan BONNELL</strong>, qui apportent chacun une expertise spécifique dans leur domaine respectif :</p>
+                <ol>
+                    <ul>
+                        <li><strong><a href="https://marinejacolot.wordpress.com">Blog de Marine JACOLOT</a> :</strong> Marine JACOLOT est responsable des maquettes, du design et du développement front-end. Son blog couvre les aspects créatifs et visuels du projet, y compris la conception des interfaces utilisateur, l'expérience utilisateur (UX) et l'implémentation des maquettes en code fonctionnel.</li>
+                        <li><strong><a href="https://nathan.bonnell.fr/blog">Blog de Nathan BONNELL</a> :</strong> Nathan BONNELL se concentre sur le back-end du site, gérant les serveurs, les bases de données et les fonctionnalités côté serveur. Son blog offre des insights sur la gestion des données, l'architecture serveur et l'intégration des différents services backend pour assurer la robustesse et l'efficacité du site.</li>
+                    </ul>
+                </ol>
+                <p>Ces blogs techniques sont essentiels pour comprendre les détails et les solutions spécifiques mises en œuvre pour créer un site web complet et fonctionnel.</p>
+            </section>
+        
+            <section class="visible">
+                <h2>Conclusion</h2>
+                <p>Ce blog vous offre une vue d'ensemble de notre projet de site web, tandis que les blogs de Marine JACOLOT et Nathan BONNELL fournissent des informations techniques détaillées sur leurs contributions respectives. En explorant ces ressources, vous obtiendrez une compréhension complète de notre projet, de la gestion globale à l'implémentation technique. Nous vous invitons à suivre nos aventures et à découvrir comment nous collaborons pour créer un site web performant et innovant.</p>
+            </section>
+        </article>
+        
+        <nav class="article-navigation">
+            <a href="articles.html" class="prev-article">&lt; Retour à la liste</a>
+            <a href="article1.html" class="next-article">Article suivant &gt;</a>
+        </nav>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog Portfolio. Tous droits réservés.</p>
+        <script src="../js/section.js"></script>
+    </footer> 
+</body>
+</html>
+    
